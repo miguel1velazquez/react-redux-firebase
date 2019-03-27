@@ -3,58 +3,58 @@
  * @type {String}
  * @description Prefix for all actions within library
  * @example
- * import { constants } from 'react-redux-firebase'
- * constants.actionsPrefix === '@@reactReduxFirebase' // true
+ * import { constants } from 'react-redux-flowjo'
+ * constants.actionsPrefix === '@@reactReduxFlowJo' // true
  */
-export const actionsPrefix = '@@reactReduxFirebase'
+export const actionsPrefix = '@@reactReduxFlowJo'
 
 /**
  * @constant
  * @type {Object}
  * @description Object containing all action types
- * @property {String} START - `@@reactReduxFirebase/START`
- * @property {String} SET - `@@reactReduxFirebase/SET`
- * @property {String} REMOVE - `@@reactReduxFirebase/REMOVE`
- * @property {String} MERGE - `@@reactReduxFirebase/MERGE`
- * @property {String} SET_PROFILE - `@@reactReduxFirebase/SET_PROFILE`
- * @property {String} LOGIN - `@@reactReduxFirebase/LOGIN`
- * @property {String} LOGOUT - `@@reactReduxFirebase/LOGOUT`
- * @property {String} LOGIN_ERROR - `@@reactReduxFirebase/LOGIN_ERROR`
- * @property {String} NO_VALUE - `@@reactReduxFirebase/NO_VALUE`
- * @property {String} UNAUTHORIZED_ERROR - `@@reactReduxFirebase/UNAUTHORIZED_ERROR`
- * @property {String} ERROR - `@@reactReduxFirebase/ERROR`
- * @property {String} SET_LISTENER - `@@reactReduxFirebase/SET_LISTENER`
- * @property {String} UNSET_LISTENER - `@@reactReduxFirebase/UNSET_LISTENER`
- * @property {String} AUTHENTICATION_INIT_STARTED - `@@reactReduxFirebase/AUTHENTICATION_INIT_STARTED`
- * @property {String} AUTHENTICATION_INIT_FINISHED - `@@reactReduxFirebase/AUTHENTICATION_INIT_FINISHED`
- * @property {String} SESSION_START - `@@reactReduxFirebase/SESSION_START`
- * @property {String} SESSION_END - `@@reactReduxFirebase/SESSION_END`
- * @property {String} FILE_UPLOAD_START - `@@reactReduxFirebase/FILE_UPLOAD_START`
- * @property {String} FILE_UPLOAD_ERROR - `@@reactReduxFirebase/FILE_UPLOAD_ERROR`
- * @property {String} FILE_UPLOAD_PROGRESS - `@@reactReduxFirebase/FILE_UPLOAD_PROGRESS`
- * @property {String} FILE_UPLOAD_COMPLETE - `@@reactReduxFirebase/FILE_UPLOAD_COMPLETE`
- * @property {String} FILE_DELETE_START - `@@reactReduxFirebase/FILE_DELETE_START`
- * @property {String} FILE_DELETE_ERROR - `@@reactReduxFirebase/FILE_DELETE_ERROR`
- * @property {String} FILE_DELETE_COMPLETE - `@@reactReduxFirebase/FILE_DELETE_COMPLETE`
- * @property {String} AUTH_UPDATE_START - `@@reactReduxFirebase/AUTH_UPDATE_START`
- * @property {String} AUTH_UPDATE_ERROR - `@@reactReduxFirebase/AUTH_UPDATE_ERROR`
- * @property {String} AUTH_UPDATE_SUCCESS - `@@reactReduxFirebase/AUTH_UPDATE_SUCCESS`
- * @property {String} PROFILE_UPDATE_START - `@@reactReduxFirebase/PROFILE_UPDATE_START`
- * @property {String} PROFILE_UPDATE_ERROR - `@@reactReduxFirebase/PROFILE_UPDATE_ERROR`
- * @property {String} PROFILE_UPDATE_SUCCESS - `@@reactReduxFirebase/PROFILE_UPDATE_SUCCESS`
- * @property {String} EMAIL_UPDATE_START - `@@reactReduxFirebase/EMAIL_UPDATE_START`
- * @property {String} EMAIL_UPDATE_ERROR - `@@reactReduxFirebase/EMAIL_UPDATE_ERROR`
- * @property {String} EMAIL_UPDATE_SUCCESS - `@@reactReduxFirebase/EMAIL_UPDATE_SUCCESS`
- * @property {String} AUTH_RELOAD_START - `@@reactReduxFirebase/AUTH_RELOAD_START`
- * @property {String} AUTH_RELOAD_ERROR - `@@reactReduxFirebase/AUTH_RELOAD_ERROR`
- * @property {String} AUTH_RELOAD_SUCCESS - `@@reactReduxFirebase/AUTH_RELOAD_SUCCESS`
- * @property {String} AUTH_LINK_START - `@@reactReduxFirebase/AUTH_LINK_START`
- * @property {String} AUTH_LINK_ERROR - `@@reactReduxFirebase/AUTH_LINK_ERROR`
- * @property {String} AUTH_LINK_SUCCESS - `@@reactReduxFirebase/AUTH_LINK_SUCCESS`
- * @property {String} AUTH_EMPTY_CHANGE - `@@reactReduxFirebase/AUTH_LINK_SUCCESS`
+ * @property {String} START - `@@reactReduxFlowJo/START`
+ * @property {String} SET - `@@reactReduxFlowJo/SET`
+ * @property {String} REMOVE - `@@reactReduxFlowJo/REMOVE`
+ * @property {String} MERGE - `@@reactReduxFlowJo/MERGE`
+ * @property {String} SET_PROFILE - `@@reactReduxFlowJo/SET_PROFILE`
+ * @property {String} LOGIN - `@@reactReduxFlowJo/LOGIN`
+ * @property {String} LOGOUT - `@@reactReduxFlowJo/LOGOUT`
+ * @property {String} LOGIN_ERROR - `@@reactReduxFlowJo/LOGIN_ERROR`
+ * @property {String} NO_VALUE - `@@reactReduxFlowJo/NO_VALUE`
+ * @property {String} UNAUTHORIZED_ERROR - `@@reactReduxFlowJo/UNAUTHORIZED_ERROR`
+ * @property {String} ERROR - `@@reactReduxFlowJo/ERROR`
+ * @property {String} SET_LISTENER - `@@reactReduxFlowJo/SET_LISTENER`
+ * @property {String} UNSET_LISTENER - `@@reactReduxFlowJo/UNSET_LISTENER`
+ * @property {String} AUTHENTICATION_INIT_STARTED - `@@reactReduxFlowJo/AUTHENTICATION_INIT_STARTED`
+ * @property {String} AUTHENTICATION_INIT_FINISHED - `@@reactReduxFlowJo/AUTHENTICATION_INIT_FINISHED`
+ * @property {String} SESSION_START - `@@reactReduxFlowJo/SESSION_START`
+ * @property {String} SESSION_END - `@@reactReduxFlowJo/SESSION_END`
+ * @property {String} FILE_UPLOAD_START - `@@reactReduxFlowJo/FILE_UPLOAD_START`
+ * @property {String} FILE_UPLOAD_ERROR - `@@reactReduxFlowJo/FILE_UPLOAD_ERROR`
+ * @property {String} FILE_UPLOAD_PROGRESS - `@@reactReduxFlowJo/FILE_UPLOAD_PROGRESS`
+ * @property {String} FILE_UPLOAD_COMPLETE - `@@reactReduxFlowJo/FILE_UPLOAD_COMPLETE`
+ * @property {String} FILE_DELETE_START - `@@reactReduxFlowJo/FILE_DELETE_START`
+ * @property {String} FILE_DELETE_ERROR - `@@reactReduxFlowJo/FILE_DELETE_ERROR`
+ * @property {String} FILE_DELETE_COMPLETE - `@@reactReduxFlowJo/FILE_DELETE_COMPLETE`
+ * @property {String} AUTH_UPDATE_START - `@@reactReduxFlowJo/AUTH_UPDATE_START`
+ * @property {String} AUTH_UPDATE_ERROR - `@@reactReduxFlowJo/AUTH_UPDATE_ERROR`
+ * @property {String} AUTH_UPDATE_SUCCESS - `@@reactReduxFlowJo/AUTH_UPDATE_SUCCESS`
+ * @property {String} PROFILE_UPDATE_START - `@@reactReduxFlowJo/PROFILE_UPDATE_START`
+ * @property {String} PROFILE_UPDATE_ERROR - `@@reactReduxFlowJo/PROFILE_UPDATE_ERROR`
+ * @property {String} PROFILE_UPDATE_SUCCESS - `@@reactReduxFlowJo/PROFILE_UPDATE_SUCCESS`
+ * @property {String} EMAIL_UPDATE_START - `@@reactReduxFlowJo/EMAIL_UPDATE_START`
+ * @property {String} EMAIL_UPDATE_ERROR - `@@reactReduxFlowJo/EMAIL_UPDATE_ERROR`
+ * @property {String} EMAIL_UPDATE_SUCCESS - `@@reactReduxFlowJo/EMAIL_UPDATE_SUCCESS`
+ * @property {String} AUTH_RELOAD_START - `@@reactReduxFlowJo/AUTH_RELOAD_START`
+ * @property {String} AUTH_RELOAD_ERROR - `@@reactReduxFlowJo/AUTH_RELOAD_ERROR`
+ * @property {String} AUTH_RELOAD_SUCCESS - `@@reactReduxFlowJo/AUTH_RELOAD_SUCCESS`
+ * @property {String} AUTH_LINK_START - `@@reactReduxFlowJo/AUTH_LINK_START`
+ * @property {String} AUTH_LINK_ERROR - `@@reactReduxFlowJo/AUTH_LINK_ERROR`
+ * @property {String} AUTH_LINK_SUCCESS - `@@reactReduxFlowJo/AUTH_LINK_SUCCESS`
+ * @property {String} AUTH_EMPTY_CHANGE - `@@reactReduxFlowJo/AUTH_LINK_SUCCESS`
  * @example
- * import { actionTypes } from 'react-redux-firebase'
- * actionTypes.SET === '@@reactReduxFirebase/SET' // true
+ * import { actionTypes } from 'react-redux-flowjo'
+ * actionTypes.SET === '@@reactReduxFlowJo/SET' // true
  */
 export const actionTypes = {
   START: `${actionsPrefix}/START`,
@@ -105,23 +105,23 @@ export const actionTypes = {
  * @type {Object}
  * @name defaultConfig
  * @description Default configuration options
- * @property {String} userProfile - `null` Location on Firebase where user
+ * @property {String} userProfile - `null` Location on FlowJo where user
  * profiles are stored. Often set to `'users'`.
- * @property {String|Function} presence - `null` Location on Firebase where of currently
+ * @property {String|Function} presence - `null` Location on FlowJo where of currently
  * online users is stored. Often set to `'presence'` or `'onlineUsers'`. If a function
- * is passed, the arguments are: `(currentUser, firebase)`.
- * @property {String|Function} sessions - `sessions` Location on Firebase where user
+ * is passed, the arguments are: `(currentUser, flowjo)`.
+ * @property {String|Function} sessions - `sessions` Location on FlowJo where user
  * sessions are stored (only if presense is set). Often set to `'sessions'` or
- * `'userSessions'`. If a function is passed, the arguments are: `(currentUser, firebase)`.
- * @property {Boolean} enableLogging - `false` Whether or not firebase
+ * `'userSessions'`. If a function is passed, the arguments are: `(currentUser, flowjo)`.
+ * @property {Boolean} enableLogging - `false` Whether or not flowjo
  * database logging is enabled. Providing `true` turns on error logging
  * (enabled by itself through `logErrors`).
  * @property {Boolean} logErrors - `true` Whether or not to log internal
- * Firebase errors (i.e. error querying or writing data) to the javascript
+ * FlowJo errors (i.e. error querying or writing data) to the javascript
  * console .
  * @property {Array|Object} preserveOnLogout - `null` Data parameters to
  * preserve when logging out. If Array is passed, each item represents keys
- * within state.firebase.data preserve. If an object is passed, Keys associate
+ * within state.FlowJo.data preserve. If an object is passed, Keys associate
  * with parts of state to preserve, and the values are Arrays contain keys
  * for keys within that slice of state to preserve.
  * @property {Object} preserveOnEmptyAuthChange - `null` Data parameters to
@@ -139,7 +139,7 @@ export const actionTypes = {
  * file metadata to Firestore instead of Real Time Database.
  * @property {Boolean} resetBeforeLogin - `true` Whether or not to reset auth
  * and profile when logging in (see issue
- * [#254](https://github.com/prescottprue/react-redux-firebase/issues/254)
+ * [#254](https://github.com/prescottprue/react-redux-flowjo/issues/254)
  * for more details).
  * @property {Boolean} enableRedirectHandling - `true` Whether or not to enable
  * redirect handling. This must be disabled if environment is not http/https
@@ -149,7 +149,7 @@ export const actionTypes = {
  * @property {Boolean} enableEmptyAuthChanges - `false` Whether or not to enable
  * empty auth changes. When set to true, `onAuthStateChanged` will be fired with,
  * empty auth changes such as `undefined` on initialization
- * (see [#137](https://github.com/prescottprue/react-redux-firebase/issues/137)).
+ * (see [#137](https://github.com/prescottprue/react-redux-flowjo/issues/137)).
  * Requires `v1.5.0-alpha` or higher.
  * @property {Boolean} autoPopulateProfile - `false` REMOVED FROM v2.0.0.
  * Whether or not to automatically populate profile with data loaded through
@@ -166,12 +166,12 @@ export const actionTypes = {
  * @property {Boolean} dispatchRemoveAction - `false` Whether or not to
  * dispatch REMOVE action when calling `remove`. **NOTE** Causes two state
  * updates if a listener is affected by your remove call.
- * @property {String} firebaseStateName - 'firebase' Assumed name of Firebase
+ * @property {String} FlowJoStateName - 'FlowJo' Assumed name of FlowJo
  * state (name given when passing reducer to combineReducers). Used in
- * firebaseAuthIsReady promise (see
- * [#264](https://github.com/prescottprue/react-redux-firebase/issues/264)).
+ * FlowJoAuthIsReady promise (see
+ * [#264](https://github.com/prescottprue/react-redux-FlowJo/issues/264)).
  * @property {Boolean} attachAuthIsReady - `true` Whether or not to attach
- * firebaseAuthIsReady to store. authIsLoaded can be imported and used
+ * FlowJoAuthIsReady to store. authIsLoaded can be imported and used
  * directly instead based on preference.
  * @property {Boolean} firestoreNamespace - `firestoreHelpers` Namespace for
  * firestore helpers (**WARNING** Changing this will break firestoreConnect HOC.
@@ -198,7 +198,7 @@ export const defaultConfig = {
   dispatchOnUnsetListener: true,
   dispatchRemoveAction: false,
   enableEmptyAuthChanges: true,
-  firebaseStateName: 'firebase',
+  flowjoStateName: 'flowjo',
   attachAuthIsReady: false,
   keysToRemoveFromAuth: [
     'appName',
@@ -221,7 +221,7 @@ export const defaultConfig = {
  * @constant
  * @type {Array}
  * @description List of all external auth providers that are supported
- * (firebase's email/anonymous included by default).
+ * (FlowJo's email/anonymous included by default).
  * @private
  */
 export const supportedAuthProviders = [
@@ -242,12 +242,12 @@ export const topLevelPaths = ['auth', 'profile', 'ordered', 'data']
 /**
  * @constant
  * @description Error message shown if runnning react-redux v6 with a v2.0.0 version
- * of react-redux-firebase
+ * of react-redux-flowjo
  * @type {String}
  * @private
  */
 export const v3ErrorMessage =
-  'Context from react-redux not found. If you are using react-redux v6 a v3.*.* version of react-redux-firebase is required. Please checkout the v3 migration guide: http://bit.ly/2SRNdiO'
+  'Context from react-redux not found. If you are using react-redux v6 a v3.*.* version of react-redux-flowjo is required. Please checkout the v3 migration guide: http://bit.ly/2SRNdiO'
 
 export default {
   actionTypes,
