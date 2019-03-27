@@ -7,6 +7,7 @@ import {
   timestampsReducer,
   errorsReducer
 } from './reducers'
+import { fetchWorkspaces } from './reducers/fetchWorkspaces';
 
 /**
  * @name FlowJoReducer
@@ -26,8 +27,5 @@ import {
  * @return {Object} flowjo redux state
  */
 export default combineReducers({
-  requesting: requestingReducer,
-  requested: requestedReducer,
-  timestamps: timestampsReducer,
-  errors: errorsReducer
+  workspaces: fetchWorkspaces
 })

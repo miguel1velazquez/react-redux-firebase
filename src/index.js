@@ -3,6 +3,7 @@ import ReactReduxFlowJoContext from './ReactReduxFlowJoContext'
 import withFlowJo, {
   createWithFlowJo
 } from './withFlowJo'
+import sagas from "./sagas"
 import reducer from './reducer'
 import constants, {
   actionTypes
@@ -16,6 +17,7 @@ export default {
   withFlowJo,
   createWithFlowJo,
   reducer,
+  flowjoSagas: sagas,
   flowjoReducer: reducer,
   constants,
   actionTypes,
