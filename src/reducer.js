@@ -1,13 +1,13 @@
 import {
   combineReducers
 } from './utils/reducers'
-import {
-  requestingReducer,
-  requestedReducer,
-  timestampsReducer,
-  errorsReducer
-} from './reducers'
-import { fetchWorkspaces } from './reducers/fetchWorkspaces';
+import workspaces from './reducers/fetchWorkspaces'
+import samples from './reducers/fetchSamples'
+import populations from './reducers/fetchPopulations'
+import parameters from './reducers/fetchParameters'
+import parameterSets from './reducers/fetchParameterSets'
+import parametersFile from './reducers/fetchParametersFile'
+import labeledParametersFile from './reducers/fetchLabeledParametersFile';
 
 /**
  * @name FlowJoReducer
@@ -27,5 +27,11 @@ import { fetchWorkspaces } from './reducers/fetchWorkspaces';
  * @return {Object} flowjo redux state
  */
 export default combineReducers({
-  workspaces: fetchWorkspaces
+  workspaces,
+  samples,
+  populations,
+  parameters,
+  parameterSets,
+  parametersFile,
+  labeledParametersFile
 })

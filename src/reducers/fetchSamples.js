@@ -1,77 +1,88 @@
 import { takeLatest, call, put } from 'redux-saga/effects'
 import Axios from 'axios'
-
 import { createAsyncTypes } from '../utils/sagas'
 import FLOWJOAPI from '../FlowJoAPI'
 import { toHTTPLocalHost } from '../utils/http'
 
 /// ////////////////////////////////////////////////////////////////////////////
-export const FETCH_WORKSPACES_ASYNC = createAsyncTypes('FETCH_WORKSPACES_ASYNC')
+export const FETCH_SAMPLES_ASYNC = createAsyncTypes('FETCH_SAMPLES_ASYNC')
 /// ////////////////////////////////////////////////////////////////////////////
 
-export const fetchWorkspaces = () => async dispatch => {
+export const fetchSamples = workspaceID => async dispatch => {
   return dispatch({
-    type: FETCH_WORKSPACES_ASYNC.PENDING
+    type: FETCH_SAMPLES_ASYNC.PENDING,
+    payload: workspaceID
   })
 }
 /// ////////////////////////////////////////////////////////////////////////////
 /// ////////////////////////////////////////////////////////////////////////////
-export const watchFetchWorkspaces = () => {
-  return takeLatest(FETCH_WORKSPACES_ASYNC.PENDING, fetchWorkspacesAsync)
+export const watchFetchSamples = () => {
+  return takeLatest(FETCH_SAMPLES_ASYNC.PENDING, fetchSamplesAsync)
 }
 
 /// ////////////////////////////////////////////////////////////////////////////
 // export const getApplicationPort = state => state.flowjo.port;
 
-const getWorkspaces = port => {
-  return Axios.get(toHTTPLocalHost(port, FLOWJOAPI.WORKSPACES.ALL))
+const getSamples = (port, workspaceID) => {
+  return Axios.get(toHTTPLocalHost(port, FLOWJOAPI.SAMPLES.ALL), {
+    params: {
+      workspaceid: workspaceID
+    }
+  })
 }
-
 /// ////////////////////////////////////////////////////////////////////////////
 
-export function* fetchWorkspacesAsync() {
+export function* fetchSamplesAsync({ payload }) {
   try {
-    // const port = yield select(getApplicationPort);
+    // const port = yield select(getApplicationPort)
     const port = 4567
-    const workspaces = yield call(getWorkspaces, port)
-    if (workspaces.data) {
-      yield put({
-        type: FETCH_WORKSPACES_ASYNC.SUCCESS,
-        payload: workspaces.data
-      })
+    // const workspaceID = yield select(getSelectedWorkspaceID)
+    const workspaceID = payload
+    if (workspaceID && port) {
+      const samples = yield call(getSamples, port, workspaceID)
+      if (samples) {
+        const { data } = samples
+        if (data) {
+          yield put({
+            type: FETCH_SAMPLES_ASYNC.SUCCESS,
+            payload: data
+          })
+        }
+      }
     }
   } catch (e) {
     yield put({
-      type: FETCH_WORKSPACES_ASYNC.ERROR
+      type: FETCH_SAMPLES_ASYNC.ERROR
     })
   }
 }
+
 /// ////////////////////////////////////////////////////////////////////////////
 /// ////////////////////////////////////////////////////////////////////////////
 
 const initialState = {
-  workspaces: null,
-  fetchingWorkspaces: false
+  samples: null,
+  fetchingSamples: false
 }
 /// ////////////////////////////////////////////////////////////////////////////
 
-const workspaces = (state = initialState, action) => {
+const samples = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_WORKSPACES_ASYNC.PENDING:
+    case FETCH_SAMPLES_ASYNC.PENDING:
       return {
         ...state,
-        fetchingWorkspaces: true
+        fetchingSamples: true
       }
-    case FETCH_WORKSPACES_ASYNC.SUCCESS:
+    case FETCH_SAMPLES_ASYNC.SUCCESS:
       return {
         ...state,
-        workspaces: action.payload,
-        fetchingWorkspaces: false
+        samples: action.payload,
+        fetchingSamples: false
       }
-    case FETCH_WORKSPACES_ASYNC.ERROR:
+    case FETCH_SAMPLES_ASYNC.ERROR:
       return {
         ...state,
-        fetchingWorkspaces: false
+        fetchingSamples: false
       }
 
     default:
@@ -79,5 +90,5 @@ const workspaces = (state = initialState, action) => {
   }
 }
 
-export default workspaces
+export default samples
 /// ////////////////////////////////////////////////////////////////////////////

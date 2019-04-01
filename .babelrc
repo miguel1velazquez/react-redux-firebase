@@ -14,7 +14,8 @@
   "plugins": [
     "lodash",
     "add-module-exports",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/transform-runtime"
   ],
   "env": {
     "es": {
@@ -26,10 +27,11 @@
     "test": {
       "plugins": [
         "@babel/plugin-transform-runtime",
+        "babel-plugin-redux-saga",
         "@babel/transform-async-to-generator",
         ["module-resolver", {
-         "root": ["./src"]
-       }]
+          "root": ["./src"]
+        }]
       ]
     }
   }

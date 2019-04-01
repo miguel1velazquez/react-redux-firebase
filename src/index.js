@@ -8,7 +8,7 @@ import reducer from './reducer'
 import constants, {
   actionTypes
 } from './constants'
-import * as helpers from './helpers'
+import flowjoActions from './actions';
 
 export default {
   ReactReduxFlowJoProvider,
@@ -21,6 +21,5 @@ export default {
   flowjoReducer: reducer,
   constants,
   actionTypes,
-  helpers,
-  ...helpers
+  ...flowjoActions,
 }

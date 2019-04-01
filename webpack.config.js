@@ -7,9 +7,14 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const config = {
   module: {
-    rules: [
-      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ }
-    ]
+    rules: [{
+      test: /\.js$/,
+      loaders: ['babel-loader'],
+      exclude: /node_modules/
+    }]
+  },
+  node: {
+    fs: "empty"
   },
   output: {
     library: 'ReactReduxFirebase',
@@ -45,13 +50,11 @@ if (config.mode === 'production') {
 }
 
 config.plugins.push(
-  new webpack.BannerPlugin(
-    {
-      banner: `${pkg.name}${env === 'production' ? '.min' : ''}.js v${pkg.version}`,
-      raw: false,
-      entryOnly: true
-    }
-  )
+  new webpack.BannerPlugin({
+    banner: `${pkg.name}${env === 'production' ? '.min' : ''}.js v${pkg.version}`,
+    raw: false,
+    entryOnly: true
+  })
 )
 
 module.exports = config
